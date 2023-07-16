@@ -118,26 +118,41 @@ main {
 /* Responsive design */
 /* mobile device */
 @media screen and (max-width: 576px) {
-    header {
+    header,main {
         padding: 20px;
     }
 
-    nav {
+    nav, .teams-container {
         flex-direction: column;
     }
-
     .banner img {
         width: 100%;
     }
-}
+
+    .teams-img{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .teams-container{
+        align-items: center;
+    }
+} 
 
 /* tablet device */
 @media screen and (min-width:576px) and (max-width: 960px) {
-    header {
+    header,main {
         padding: 40px;
     }
 
-    nav {
+    nav,
+    .teams-container
+    {
         flex-direction: column;
+    }
+    .teams-img{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .teams-content{
+        padding-left: 4.40rem;
+        padding-right: 1.875rem;
     }
 }
