@@ -1,6 +1,143 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
 
-*{
+/* Common shared Styles */
+
+* {
     font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    margin: 1px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 24px;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.text-light-gray {
+    color: #727272;
+}
+
+/* header style */
+header {
+    background: rgba(255, 144, 14, 0.10);
+    padding: 50px 240px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-size: 2.8rem;
+    color: #131313;
+    font-weight: 700;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    margin-right: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav a {
+    text-decoration: none;
+    color: #424242;
+}
+
+/* Banner Style */
+.banner-title {
+    color: #131313;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.banner-content {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.banner img {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* main style */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 85px;
+}
+
+/* Teams style */
+.teams-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.teams-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.teams-title {
+    font-size: 2.8rem;
+    color: #727272;
+    max-width: 29.25rem;
+}
+
+.of-our {
+    color: #131313;
+    font-weight: 700;
+}
+
+.feature-style {
+    color: #FF900E;
+    font-weight: 700;
+}
+
+/* Responsive design */
+/* mobile device */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}
+
+/* tablet device */
+@media screen and (min-width:576px) and (max-width: 960px) {
+    header {
+        padding: 40px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
 }
