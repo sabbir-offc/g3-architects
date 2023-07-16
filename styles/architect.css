@@ -24,7 +24,7 @@ body {
 
 .section-title {
     font-size: 2.8rem;
-    color: #727272;
+    color: #131313;
     max-width: 29.25rem;
 }
 
@@ -107,8 +107,8 @@ main {
 
 
 
-.of-our {
-    color: #131313;
+.team-title {
+    color: #727272;
     font-weight: 700;
 }
 
@@ -124,6 +124,7 @@ main {
 .facts-card-container {
     display: flex;
     justify-content: space-around;
+    margin-top: 100px;
 }
 
 .facts-card-container .cards {
@@ -147,23 +148,47 @@ main {
     font-weight: 600;
     margin-top: 2px;
 }
-
-
-
-
-
+.fact-title{
+    margin-bottom: 5px;
+}
+.fact-description {
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 50%;
+    margin-top: 0;
+}
+/* sponsors */
+.sponsor-container{
+    text-align: center;
+    margin-top: 180px;
+}
+.sponsor-container .section-title{
+    margin: 0 auto;
+}
+.sponsor-img{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+.sponsor-img img{
+    width: 165px;
+}
 
 /* Responsive design */
 /* mobile device */
 @media screen and (max-width: 576px) {
 
     header,
-    main {
+    main,
+    .facts-card-container {
         padding: 20px;
     }
 
     nav,
-    .teams-container {
+    .teams-container,
+    .facts-card-container, .sponsor-img {
         flex-direction: column;
     }
 
@@ -178,27 +203,40 @@ main {
     .teams-container {
         align-items: center;
     }
+
+    .facts-card-container {
+        gap: 20px;
+    }
 }
 
 /* tablet device */
 @media screen and (min-width:576px) and (max-width: 960px) {
 
     header,
-    main {
+    main,
+    .facts-card-container {
         padding: 50px;
     }
 
     nav,
-    .teams-container {
+    .teams-container
+    {
         flex-direction: column;
     }
 
     .teams-img {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .teams-content {
         padding-left: 4.40rem;
         padding-right: 1.875rem;
+    }
+
+    .facts-card-container {
+        gap: 10px;
+    }
+    .sponsor-img img{
+        width: 90px;
     }
 }
